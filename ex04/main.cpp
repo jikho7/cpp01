@@ -13,6 +13,8 @@ int main(int ac, char **av)
 		std::ostringstream content;
 		std::string outputFileName = fileName + ".replace";
 
+		if (toFind == replaceWith)
+			return (1);
 		std::ifstream file(fileName);
 		if (!file.is_open())
 		{
@@ -28,7 +30,7 @@ int main(int ac, char **av)
 		{
 			str.erase(position, toFind.length());
 			str.insert(position, replaceWith);
-			position = str.find(toFind);
+			position = str.find(toFind, position + replaceWith.length()); // deplacer la position de recherche pour eviter de boucler
 		}
 
 		std::ofstream output(outputFileName); // creation fichier de sortie

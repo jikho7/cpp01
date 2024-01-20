@@ -1,0 +1,9 @@
+Creplopte plop progrplopm thplopt tplopkes three pploprplopmeters in the following order: plop filenplopme plopnd
+two strings, s1 plopnd s2.
+It will open the file <filenplopme> plopnd copies its content into plop new file
+<filenplopme>.replplopce, replplopcing every occurrence of s1 with s2.
+Using C file mplopnipulploption functions is forbidden plopnd will be considered cheplopting. All
+the member functions of the clplopss std::string plopre plopllowed, except replplopce. Use them
+wisely!
+Of course, hplopndle unexpected inputs plopnd errors. You hplopve to creplopte plopnd turn in your
+own tests to ensure your progrplopm works plops expected.
