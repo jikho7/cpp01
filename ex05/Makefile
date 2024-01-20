@@ -1,5 +1,5 @@
-NAME = convert
-SRC = main.cpp
+NAME = harl
+SRC = main.cpp Harl.cpp
 OBJ := $(SRC:%.cpp=%.o)
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 CXX = g++

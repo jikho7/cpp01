@@ -15,6 +15,7 @@ int main(int ac, char **av)
 
 		if (toFind == replaceWith)
 			return (1);
+
 		std::ifstream file(fileName);
 		if (!file.is_open())
 		{
@@ -47,6 +48,8 @@ int main(int ac, char **av)
 }
 
 /*
+	size_t find(const std::string& str, size_t pos = 0), 0 par defaut
+
 	std::string::find
 	insert	Insert into string (public member function)
 	erase	Erase characters from string (public member function)
