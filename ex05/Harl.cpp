@@ -1,5 +1,6 @@
 #include "Harl.hpp"
 
+//void (Harl::*)();	type ptr sur fonction
 
 Harl::Harl(){}
 
@@ -7,7 +8,24 @@ Harl::~Harl(){}
 
 void Harl::complain( std::string level )
 {
-
+	const std::string names[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void (Harl::*functions[])() = // type de tab : void(Harl::*)(), declaration variable : functions[]
+	{
+    	&Harl::debug,
+    	&Harl::info,
+    	&Harl::warning,
+    	&Harl::error
+	};
+   
+	for (int i = 0; i < 4; i++)
+	{
+		if (level == names[i])
+		{
+			(this->*functions[i])();
+			return;
+		}
+	}
+	std::cout << "Argument no valid" << std::endl;
 }
 
 
@@ -19,7 +37,7 @@ void Harl::debug( void )
 void Harl::info( void )
 {
 	std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
-}
+} 
 
 void Harl::warning( void )
 {

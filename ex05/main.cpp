@@ -1,14 +1,13 @@
 #include "Harl.hpp"
 
-int main ()
+//	void (Harl::* ptrMemberFt)(std::string) = &Harl::complain;
+//	(harl.*ptrMemberFt)(av[1]);
+
+int main(int ac, char**av)
 {
-	std::string choice;
+	(void)ac;
 	Harl harl;
 
-	void (Harl::* ptrMemberFt)(std::string) = &Harl::complain;
-	std::cout << "Enter un level : DEBUG " << "\n" << " INFO" << "\n" << "WARNING" << "\n" << "ERROR" << std::endl;
-	std::cin >> choice;
-
-	(harl.*ptrMemberFt)(choice);
+	harl.complain(av[1]);
 	return (0);
 }
