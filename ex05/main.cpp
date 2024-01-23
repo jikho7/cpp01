@@ -5,9 +5,9 @@
 
 int main(int ac, char**av)
 {
-	(void)ac;
-	Harl harl;
 
-	harl.complain(av[1]);
+	Harl harl;
+	if (ac > 1)
+		harl.complain(av[1]);
 	return (0);
 }

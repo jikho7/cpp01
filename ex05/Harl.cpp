@@ -25,7 +25,7 @@ void Harl::complain( std::string level )
 			return;
 		}
 	}
-	std::cout << "Argument no valid" << std::endl;
+	std::cout << "Argument not found" << std::endl;
 }
 
 
